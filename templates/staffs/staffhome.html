@@ -85,7 +85,7 @@
     <h2>STUDENTD DETAILS</h2>
     <table width="95%">
         <tr>
-            <th colspan="10" class="table-main-heading">TOTAL STUDENTS : {{s2}}</th>
+            <th colspan="12" class="table-main-heading">TOTAL STUDENTS : {{s2}}</th>
         </tr>
         <tr>
             <th>Register No</th>
@@ -95,7 +95,7 @@
             <th>Batch</th>
             <th>phone</th>
             <th>Email</th>
-            <th colspan="3">Actions</th>
+            <th colspan="5">Actions</th>
         </tr>
         {% for i in s1 %}
         <tr>
@@ -109,6 +109,8 @@
             <td><a href="">VIEW</a></td>
             <td><a href="">EDIT</a></td>
             <td><a href="{% url 'delstudent' i.email %}">DELETE</a></td>
+            <td><a href="{% url 'enroll' i.id %}">ENROLL</a></td>
+            <td><a href="{% url 'viewfee' i.id %}">FEE DETAILS</a></td>
         </tr>
         {% endfor %}
     </table>

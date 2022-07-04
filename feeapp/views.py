@@ -54,11 +54,11 @@ def userprofile(request):
     if request.method == "POST":
         fname=request.POST.get('fname')
         lname=request.POST.get('lname')
-        email=request.POST.get('email')
+        email1=request.POST.get('email')
         phone=request.POST.get('phone')
         courses=request.POST.get('course')
         batch=request.POST.get('batch')
-        p1=student(firstname=fname,secondname=lname,email=email,phone=phone,course=courses,batch=batch)
+        p1=student(firstname=fname,secondname=lname,email=email1,phone=phone,course=courses,batch=batch)
         p1.save()
         return redirect('/login')
 
@@ -187,3 +187,26 @@ def profileupdate(request,pk_test):
     u1=User.objects.get(id=pk_test)
     context={'u_form':u_form,'p_form':p_form}
     return render(request,'profile_update.html',context)
+
+def enroll(request,pk_test):
+    st1=student.objects.get(id=pk_test)
+    c1=course.objects.get(coursename=st1.course)
+    s1=c1.fees
+    s2=c1.fees
+    s3=c1.fees
+    s4=c1.fees
+    s5=c1.fees
+    s6=c1.fees
+    total=s1+s2+s3+s4+s5+s6
+    f1=fees(sid=st1.id,cid=c1.id,s1=s1,s2=s2,s3=s3,s4=s4,s5=s5,s6=s6,total=total)
+    f1.save()
+    return redirect('/staffhome')
+
+def viewfee(request,pk_test):
+    s1=student.objects.get(id=pk_test)
+    sid1=s1.id
+    f1=fees.objects.get(sid=s1.id)
+    c1=course.objects.get(id=f1.cid)
+
+    context={'s1':s1,'f1':f1,'c1':c1}
+    return render(request,'viewfee.html',context)
