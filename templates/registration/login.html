@@ -1,0 +1,29 @@
+
+
+{% load static %}
+<html>
+    <head>
+        <title>login  </title>
+            <link rel="stylesheet" href="{% static 'css/registration/register.css' %}">
+      
+    </head>
+    <body>
+        {% include 'navhome.html'%}
+        <div class="login-page">
+            <div class="form">
+                <form action="" class="login-form" method="POST">
+                    {% csrf_token %}
+                    <input type="text"  placeholder="Username" name="uname">
+                    <input type="password" placeholder="Password" name="pwd">
+                    {% for messages in messages%}
+                        <p>{{messages}}</p>
+                    {% endfor %}
+
+                    <button type="submit" name="submit">LOGIN</button>
+                    <p class="message">Not Registered ? <a href="{% url 'register'%}">REGISTER</a></p>
+                </form>
+            </div>
+        </div>
+        
+    </body>
+</html>

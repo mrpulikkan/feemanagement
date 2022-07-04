@@ -1,0 +1,39 @@
+
+{%load static %}
+<html>
+<head>
+    <title>sign up</title>
+    <link rel="stylesheet" href="{% static 'css/registration/register.css'%}">
+</head>
+
+<body>
+    <div class="login-page">
+        <div class="form">
+            <form  class="register-form" action="" method="POST">
+                {% csrf_token %}
+                {{u_form}}
+                {{p_form}}
+
+                {{form.message}}
+                <button type="submit" name="submit">UPDATE</button>
+                <a class="button-cancel" href="{% url 'index' %}">CANCEL</a>
+            </form>
+        </div>
+    </div>
+    <script>
+        var form_fields = document.getElementsByTagName('input')
+        form_fields[1].placeholder='Username';
+        form_fields[2].placeholder='Email';
+        form_fields[3].placeholder='Confirm email';
+        form_fields[4].placeholder='first name';
+        form_fields[5].placeholder='second name';
+        form_fields[6].placeholder='course';
+        form_fields[7].placeholder='duration';
+        form_fields[8].placeholder='batch';
+
+        for (var field in form_fields){
+            form_fields[field].className += 'form-controls'
+        }
+    </script>
+</body>
+</html>

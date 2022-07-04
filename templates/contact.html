@@ -1,0 +1,151 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Stoneridge</title>
+
+
+   <!-- bootstrap core css -->
+   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+   <!-- fonts style -->
+   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+   <!-- slick slider -->
+ 
+   <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}" />
+   <!-- font awesome style -->
+   <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+   <!-- Custom styles for this template -->
+   <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+   <!-- responsive style -->
+   <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+ 
+
+</head>
+
+<body class="sub_page">
+
+{% include 'navhome.html' %}
+
+  <div class="bottom_bg">
+
+    <!-- contact section -->
+    <section class="contact_section layout_padding">
+
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            Contact Us
+          </h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form_container">
+              <form action="">
+                <div>
+                  <input type="text" placeholder="Your Name" />
+                </div>
+                <div>
+                  <input type="text" placeholder="Phone Number" />
+                </div>
+                <div>
+                  <input type="email" placeholder="Your Email" />
+                </div>
+                <div>
+                  <input type="text" class="message-box" placeholder="Message" />
+                </div>
+                <div class="btn_box">
+                  <button>
+                    SEND
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="map_container">
+              <div id="googleMap"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end contact section -->
+
+    <!-- info section -->
+    <section class="info_section ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <hr>
+          </div>
+        </div>
+        <div class="info_box ">
+          <div class="info_contact">
+            <a href="">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                Location
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                +01 1234567890
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-envelope"></i>
+              <span>
+                demo@gmail.com
+              </span>
+            </a>
+          </div>
+          <div class="social_box">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end info_section -->
+
+  </div>
+
+  <!-- footer section -->
+  {% include 'footer.html' %}
+
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>

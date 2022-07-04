@@ -1,0 +1,189 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Stoneridge</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- slick slider -->
+
+  <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}" />
+  <!-- font awesome style -->
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+<!-- Staffs styles -->
+  <link href="{% static 'css/staff.css' %}" rel="stylesheet" />
+
+
+</head>
+
+<body class="sub_page">
+{% include 'staffs/navstaff.html '%}
+
+  <!-- about section -->
+
+  
+   
+  
+<br><br>
+<h3>Hello,{{user}}</h3>
+<h4>Welcome to MES AIMAT</h4>
+
+<br><br>
+
+<center>
+    <h2>COURSES</h2>
+    <table width="95%">
+        <tr>
+            <th colspan="5" class="table-main-heading">Total Courses : {{p2}}</th>
+        </tr>
+        <tr>
+            <th>Id</th>
+            <th>Course</th>
+            <th>Department</th>
+            <th>Duration</th>
+            <th>Actions</th>
+        </tr>
+        {% for i in p1 %}
+        <tr>
+            <td>{{i.courseid}}</td>
+            <td>{{i.coursename}}</td>
+            <td>{{i.department}}</td>
+            <td>{{i.duration}}</td>
+            <td><a href="{% url 'delcourse' i.id %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <div class="addcourse">
+        <a href="">ADD COURSE</a>
+    </div>
+    <hr>
+    <br>
+
+    <h2>STUDENTD DETAILS</h2>
+    <table width="95%">
+        <tr>
+            <th colspan="10" class="table-main-heading">TOTAL STUDENTS : {{s2}}</th>
+        </tr>
+        <tr>
+            <th>Register No</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Course</th>
+            <th>Batch</th>
+            <th>phone</th>
+            <th>Email</th>
+            <th colspan="3">Actions</th>
+        </tr>
+        {% for i in s1 %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.firstname}}</td>
+            <td>{{i.secondname}}</td>
+            <td>{{i.course}}</td>
+            <td>{{i.batch}}</td>
+            <td>{{i.phone}}</td>
+            <td>{{i.email}}</td>
+            <td><a href="">VIEW</a></td>
+            <td><a href="">EDIT</a></td>
+            <td><a href="{% url 'delstudent' i.email %}">DELETE</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <div class="addcourse">
+        <a href="{% url 'register' %}">ADD STUDENT</a>
+    </div>
+    <hr>
+    <br>
+
+</center>
+
+
+  <!-- end about section -->
+
+
+  <div class="bottom_bg">
+
+    <!-- info section -->
+    <section class="info_section ">
+      <div class="container">
+        <div class="info_box ">
+          <div class="info_contact">
+            <a href="">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                Location
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                +01 1234567890
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-envelope"></i>
+              <span>
+                demo@gmail.com
+              </span>
+            </a>
+          </div>
+          <div class="social_box">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end info_section -->
+
+  </div>
+
+  <!-- footer section -->
+  {% include 'footer.html' %}
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>

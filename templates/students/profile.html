@@ -1,0 +1,76 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block 'content' %}
+<head>
+    
+    <style>
+      
+        .profile-edit{
+            width: 190px;
+            height: 40px;
+            border: 0;
+            background-color:  #3c91ed;
+            color: white;
+            font-weight: 100;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 20px;
+            border: 0.5px solid #a067a8 ;
+        }
+        .profile-edit a{
+            color: white;
+        }
+        .profile-edit:hover{
+            background-color:#a067a8;
+        }
+
+    </style>
+</head>
+<h2>{{s1.firstname}}&nbsp {{s1.secondname}}</h2>
+<h2>Welcome To Our College</h2>
+<hr color="#3993f0">
+<br>
+<h4>PROFILE</h4>
+<br>
+<table border="0" style="margin-left:20px">
+    <h3>
+        <tr>
+            <td>Register No : </td>
+            <td> {{s1.id}}</td>
+        </tr>
+        <tr>
+            <td>First Name : </td>
+            <td>{{s1.firstname}}</td>
+        </tr>
+        <tr>
+            <td>Second Name : </td>
+            <td>{{s1.secondname}}</td>
+        </tr>
+        <tr>
+            <td>Email : </td>
+            <td>{{s1.email}}</td>
+        </tr>
+        <tr>
+            <td>Phone : </td>
+            <td>{{s1.phone}}</td>
+        </tr>
+        <tr>
+            <td>Course : </td>
+            <td>{{s1.course}}</td>
+        </tr>
+        <tr>
+            <td>Batch : </td>
+            <td>{{s1.batch}}</td>
+        </tr>
+    </h4>
+</table>
+<br>
+
+<form action="" >
+    <button class="profile-edit"><a href="{% url 'profileupdate' user.id %}">EDIT PROFILE</a></button>
+    <button class="profile-edit"><a href="{% url 'change_password' %}">CHANGE PASSWORD</a></button>
+
+</form>
+
+<br><br>
+{% endblock %}

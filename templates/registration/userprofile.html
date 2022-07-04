@@ -1,0 +1,70 @@
+{% load static %}
+<html>
+    <head>
+        <title>userprofile</title>
+        <link rel="stylesheet" href="{% static 'css/registration/register.css' %}">
+        <style>
+            .form button{
+                font-family: "Roboto", sans-serif;
+                outline: 0;
+                background: grey ;
+                width: 40%;
+                margin:0 10px;
+                border: 0;
+                border-radius: 15px;
+                padding: 15px;
+                font-size: 14px;
+                color: #FFFFFF;
+                cursor: pointer;
+            }
+            .form button:hover{
+                background-color: #118415;
+            }
+            #button-cancel{
+                background: grey
+            }
+            #button-cancel:hover{
+                background-color: red;
+            }
+
+
+        </style>
+    </head>
+    <body>
+      
+        <div class="login-page">
+            <div class="form">
+                {% for messages in messages%}
+                <p>{{messages}}</p>
+                 {% endfor %}
+                <form  class="register-form" action="" method="POST">
+                    {% csrf_token %}
+                    <input type="text" placeholder="First Name" name="fname">
+                    <input type="text" placeholder="Last Name" name="lname">
+                    <input type="email" placeholder="Email" name="email">
+                    <input type="text" placeholder="Phone Number" name="phone">
+                    <select  name="course" >
+                        <option  value="MCA">--Select Course--</option>
+                        {% for i in c1 %}
+                        <option  value="{{i.coursename}}">{{i.coursename}}</option>
+                        {% endfor %}
+                        <!-- <option  value="MCA">MCA</option>
+                        <option  value="MBA">MBA</option>
+                        <option  value="BCA">BCA</option>
+                        <option  value="BBA">BBA</option> -->
+                      </select>
+                      <select  name="batch" >
+                        <option  value="MCA">--Batch--</option>
+                        <option  value="2020">2020</option>
+                        <option  value="2021">2021</option>
+                        <option  value="2022">2022</option>
+                        <option  value="2023">2023</option>
+                      </select>
+                    <button type="submit" name="submit">REGISTER</button><button id="button-cancel" type="reset" name="reset">CLEAR</button>
+                </form>
+                    
+            </div>
+        </div>
+        
+    </body>
+</html>

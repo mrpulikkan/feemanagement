@@ -1,0 +1,205 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Stoneridge</title>
+
+
+   <!-- bootstrap core css -->
+   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+   <!-- fonts style -->
+   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+   <!-- slick slider -->
+ 
+   <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}" />
+   <!-- font awesome style -->
+   <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+   <!-- Custom styles for this template -->
+   <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+   <!-- responsive style -->
+   <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+ 
+</head>
+
+<body class="sub_page">
+
+  {% include 'navhome.html' %}
+
+  <!-- course section -->
+
+  <section class="course_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Our <span>Courses</span>
+        </h2>
+        <p>
+          going to use a passage of Lorem Ipsum, you need to be sure there isn't
+        </p>
+      </div>
+    </div>
+    <div id="customCarousel2" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/course-img.jpg" alt="">
+              </div>
+              <div class="row">
+                <div class="col-lg-7 col-md-9 mx-auto">
+                  <div class="detail-box">
+                    <h3>
+                      Node with React
+                    </h3>
+                    <p>
+                      Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                    </p>
+                    <a href="">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/course-img.jpg" alt="">
+              </div>
+              <div class="row">
+                <div class="col-lg-7 col-md-9 mx-auto">
+                  <div class="detail-box">
+                    <h3>
+                      Node with React
+                    </h3>
+                    <p>
+                      Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                    </p>
+                    <a href="">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/course-img.jpg" alt="">
+              </div>
+              <div class="row">
+                <div class="col-lg-7 col-md-9 mx-auto">
+                  <div class="detail-box">
+                    <h3>
+                      Node with React
+                    </h3>
+                    <p>
+                      Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                    </p>
+                    <a href="">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel_btn-box">
+        <a class="carousel-control-prev" href="#customCarousel2" role="button" data-slide="prev">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#customCarousel2" role="button" data-slide="next">
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end course section -->
+
+  <div class="bottom_bg">
+
+    <!-- info section -->
+    <section class="info_section ">
+      <div class="container">
+        <div class="info_box ">
+          <div class="info_contact">
+            <a href="">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                Location
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                +01 1234567890
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-envelope"></i>
+              <span>
+                demo@gmail.com
+              </span>
+            </a>
+          </div>
+          <div class="social_box">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end info_section -->
+
+  </div>
+
+  <!-- footer section -->
+  {% include 'footer.html' %}
+
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>
